@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOMga element qo'shish</title>
+        <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Ro'yxat -->
+        <div class="container-fluid">
+            <div class="row p-3 w-100 d-flex justify-content-between">
+                <div class="col-5 border border-success rounded p-3">
+                    <h2>Mavjud elementlar</h2>
+                    <ul id="myList">
+                        <li>1-element</li>
+                        <li>2-element</li>
+                    </ul>
+                </div>
+                <div
+                    class="col-5 border border-dark rounded d-flex align-items-center"
+                >
+                    <h2 class="fs-1 fw-bold text-center">
+                        Tugma bosilganda ro'yhatga yangi element qo'shiladi.
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tugma -->
+        <button onclick="addItem()" class="btn btn-success m-3">
+            Ro'yxatga element qo'shish
+        </button>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"
+        ></script>
+
+        <script>
+            // Element qo'shadigan funksiya
+            function addItem() {
+                // Yangi li elementi yaratish
+                const newItem = document.createElement("li");
+
+                // Yangi elementning matnini o'rnatish
+                newItem.textContent = "Yangi element";
+
+                // Yaratilgan elementni ro'yxatga qo'shish
+                document.getElementById("myList").appendChild(newItem);
+            }
+        </script>
+    </body>
+</html>
