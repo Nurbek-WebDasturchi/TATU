@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uz">
+    <head>
+        <title>Изменение стилей с jQuery</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#changeStyleBtn").click(function () {
+                    $("a").css("color", "blue");
+                    $("a").css("font-size", "40px");
+                });
+            });
+            $(document).ready(function () {
+                $("#changeStyleBtn1").click(function () {
+                    $("p").css("color", "red");
+                    $("p").css("font-size", "60px");
+                });
+            });
+            $(document).ready(function () {
+                $("#changeStyleBtn2").click(function () {
+                    $("body").css("background-color", "#212121");
+                });
+            });
+        </script>
+        <style>
+            h1,
+            a,
+            p {
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Пример изменения стилей</h1>
+        <a>Это пример параграфа.</a>
+        <p>Это другой параграф.</p>
+        <button id="changeStyleBtn">Изменить стиль 1</button>
+        <button id="changeStyleBtn1">Изменить стиль 2</button>
+        <button id="changeStyleBtn2">Tun rejim</button>
+    </body>
+</html>
